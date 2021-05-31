@@ -21,6 +21,8 @@ namespace first_net__core
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    //webBuilder.UseKestrel();
+                    //webBuilder.UseUrls("http://*:1234");
                 });
     }
 }
