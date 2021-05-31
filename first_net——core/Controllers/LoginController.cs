@@ -15,7 +15,7 @@ namespace first_net__core.Controllers
        
         public IActionResult login()
         {
-            string test = "wa哈哈";
+            string test = "sdf";
             return View();
         }
 
