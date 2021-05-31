@@ -26,7 +26,7 @@ namespace first_net__core.Controllers
         public IActionResult Index(int? id)
         {
             Response.ContentType = "text/html;charset=UTF-8";
-
+            
             HttpContext.Session.SetString("userinfo","aa");
             String str = HttpContext.Session.GetString("userinfo");
             //int re=_iMath.sum(1, 2);
