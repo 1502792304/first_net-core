@@ -17,6 +17,9 @@ namespace first_net__core.Controllers
         {
             return View();
         }
+
+        public IActionResult index() => View();
+
         [HttpPost]
         public IActionResult Go_Login()
         {

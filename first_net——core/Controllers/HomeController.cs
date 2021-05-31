@@ -30,7 +30,7 @@ namespace first_net__core.Controllers
             HttpContext.Session.SetString("userinfo","aa");
             String str = HttpContext.Session.GetString("userinfo");
             //int re=_iMath.sum(1, 2);
-
+            int testRecode = 12;
             IMath imath_1= (IMath)HttpContext.RequestServices.GetService(typeof(IMath));
             int re1= imath_1.sum(10,20);
 

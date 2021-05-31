@@ -70,12 +70,32 @@ namespace first_net__core
             app.Res();
 
             //系统自带路由
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //        name: "default",
-            //        pattern: "{controller=Home}/{action=Index}/{id:int?}");
-            //});
+            app.UseEndpoints(endpoints =>
+            {
+                //正则约束，555,55,5555格式
+                endpoints.MapControllerRoute(
+               name: "home",
+               pattern: "{controller}/{ssn}",
+               constraints: new { ssn = "^\\d{3}-\\d{2}-\\d{4}$", },
+               defaults: new { controller = "Home", action = "Index", });
+
+                //固定action
+                //endpoints.MapControllerRoute(
+                //name: "AA",
+                //pattern: "{controller=Home}",
+                //defaults: new { controller = "Home", action = "Index" });
+
+                //固定控制器
+                //endpoints.MapControllerRoute(
+                //   name: "AA",
+                //   pattern: "wahaha/{action}",
+                //   defaults: new { controller = "Home", action = "Index" });
+
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    //控制器和action可以交换位置
+                    pattern: "{controller=Home}/{action=Index}/{id:int?}");
+            });
 
 
         }

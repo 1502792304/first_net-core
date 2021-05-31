@@ -22,7 +22,7 @@ namespace first_net__core.midd
         {
             //应该只是一个url拦截检测作用,可以伪造静态页
             context.Response.ContentType = "text/html;charset=UTF-8";
-            if (context.Request.Path == "/")
+            if (context.Request.Path == "/help")
             {
                 await context.Response.WriteAsync("Hello terminal middleware!");
                 return;
