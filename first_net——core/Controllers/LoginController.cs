@@ -15,7 +15,7 @@ namespace first_net__core.Controllers
        
         public IActionResult login()
         {
-            string test = "sdf";
+            string test = "xcv";
             return View();
         }
 
